@@ -2,18 +2,14 @@ package accountApp;
 public class Account {
 	
 	//Fields
-	String firstName;
-	String lastName;
-	int accountNumber;
+	private String firstName, lastName;
+	private int accountNumber;
 
 	//Constructor
 	public Account(String firstName, String lastName, int accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-	}
-	
-	public Account() {
 	}
 	
 	//getters and setters for all above fields

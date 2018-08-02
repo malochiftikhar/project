@@ -2,15 +2,14 @@ package testsAccountApplication;
 
 import static org.junit.Assert.*;
 
-import org.json.simple.JSONObject;
 import org.junit.Test;
 
 import accountApp.Account;
 import accountApp.Service;
 
-public class testServices {
-	Account account = new Account("iftikhar", "khan", 7364527);
-	Service service = new Service();	
+public class TestServices {
+	private Account account = new Account("iftikhar", "khan", 7364527);
+	private Service service = new Service();	
 	
 	@Test
 	public void testSetFName() {
@@ -31,16 +30,19 @@ public class testServices {
 	
 	@Test
 	public void setAccountNumber() {
+		account.setAccountNumber(7364527);
 		assertEquals("account number can not be set", account.getAccountNumber(),7364527);
 	}
 	
 	@Test
 	public void getFirstName() {
+		account.getFirstName();
 		assertEquals("can not get output for first name", account.getFirstName(),"iftikhar");
 	}
 	
 	@Test
 	public void getLastName() {
+		account.getLastName();
 		assertEquals("can not get output for last name", account.getLastName(), "khan");
 	}
 	

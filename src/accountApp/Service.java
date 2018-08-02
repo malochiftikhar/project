@@ -12,7 +12,7 @@ public class Service {
 		accounts.put(account.getAccountNumber(), account.getFullName());
 	}
 
-	public Map getAccounts() {
+	public Map<Integer, String> getAccounts() {
 		for (Map.Entry<Integer, String> entry : accounts.entrySet()) {
 			System.out.println(entry.getKey() + ", " + entry.getValue());
 		}
@@ -22,8 +22,6 @@ public class Service {
 	
 	public JSONObject toJSON() {
 		JSONObject obj = new JSONObject(accounts);
-//		String g = obj.toJSONString(accounts);
-//		System.out.println(g);
 		return obj;
 	}
 }
