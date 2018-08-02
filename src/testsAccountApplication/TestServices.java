@@ -9,7 +9,9 @@ import accountApp.Service;
 
 public class TestServices {
 	private Account account = new Account("iftikhar", "khan", 7364527);
-	private Service service = new Service();	
+	private Service service = new Service();
+	private Account account1 = new Account("iftikhar", "khan", 1364527);
+	private Service service1 = new Service();
 	
 	@Test
 	public void testSetFName() {
@@ -50,13 +52,20 @@ public class TestServices {
 	public void addAccount() {
 		Service service = new Service();
 		service.addAccount(account);
-		assertEquals("account not added", service.getAccounts().toString(),"{7364527=iftikhar khan}");
+		assertEquals("account not added", account, service.getAccounts().get(7364527));
 	}
 	
 	@Test
 	public void testToJSON() {
 		service.addAccount(account);
 		service.toJSON();
-		assertEquals("can not convert to JSON",service.toJSON().toString(),"{\"7364527\":\"iftikhar khan\"}");
+		assertEquals("can not convert to JSON",service.toJSON().toString(),"{\"7364527\":iftikhar khan}");
+	}
+	
+	@Test
+	public void testAmountAccounts() {
+		service.addAccount(account);
+		service.addAccount(account1);
+		assertEquals("the name is incorrect", service.amountAccount("iftikhar"), 2);
 	}
 }

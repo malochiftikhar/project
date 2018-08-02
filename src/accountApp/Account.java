@@ -36,4 +36,9 @@ public class Account {
 		String fullname = String.format("%s %s", firstName, lastName);
         return fullname;
 	}
+	
+	@Override
+	public String toString() {
+		return getFullName();
+	}
 }
