@@ -13,6 +13,9 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 	
+	public Account() {
+	}
+	
 	//getters and setters for all above fields
 	public String getFirstName() {
 		return firstName;
@@ -34,7 +37,7 @@ public class Account {
 	}
 	
 	public String getFullName() {
-		String fullname = String.format("Name: %s %s", firstName, lastName);
+		String fullname = String.format("%s %s", firstName, lastName);
         return fullname;
 	}
 }
