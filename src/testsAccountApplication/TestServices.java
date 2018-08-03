@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import accountApp.Account;
-import accountApp.Service;
+import appAccount.Account;
+import appAccount.Service;
 
 public class TestServices {
 	private Account account = new Account("iftikhar", "khan", 7364527);
